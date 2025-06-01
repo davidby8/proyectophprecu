@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS gimnas;
+USE gimnas;
+
+CREATE TABLE IF NOT EXISTS usuaris (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255),
+  rol VARCHAR(20) DEFAULT 'usuari'
+);
+
+CREATE TABLE IF NOT EXISTS reserves (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  classe VARCHAR(100),
+  data DATE,
+  hora TIME,
+  id_usuari INT,
+  FOREIGN KEY (id_usuari) REFERENCES usuaris(id) ON DELETE CASCADE
+);
