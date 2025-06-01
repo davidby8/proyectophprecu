@@ -11,5 +11,5 @@ if ($_POST) {
   Nom: <input name="nom"><br>
   Email: <input name="email"><br>
   Contrasenya: <input type="password" name="pass"><br>
-  <button>Registrar</button>
+  <button>Registrarr</button>
 </form>
